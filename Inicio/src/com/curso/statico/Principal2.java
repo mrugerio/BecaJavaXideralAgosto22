@@ -4,7 +4,7 @@ public class Principal2 {
 
 	public static void main(String[] args) {
 		
-		System.out.println(Pato.getContador());
+		System.out.println(Pato.obtenerContador());
 		
 		Pato pato1 = new Pato();
 		pato1.volar();
@@ -16,7 +16,7 @@ public class Principal2 {
 		pato3.volar();
 		//System.out.println(pato3.getContador());
 				
-		System.out.println(Pato.getContador()); //3
+		System.out.println(Pato.obtenerContador()); //3
 
 	}
 

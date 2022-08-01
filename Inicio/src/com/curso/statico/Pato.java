@@ -27,7 +27,7 @@ public class Pato{
 		System.out.println("No puedo volar");
 	}
 	
-	static int getContador() {
+	static int obtenerContador() {
 		return contador;
 	}
 	
