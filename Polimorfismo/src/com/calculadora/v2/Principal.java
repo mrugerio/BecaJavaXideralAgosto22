@@ -23,9 +23,9 @@ public class Principal {
 	static void ejecutaOperaciones(
 			         List<Operacion> listOperaciones) {
 		for (Operacion ope:listOperaciones) { //ForEach
-			System.out.println(ope.toString());
-			int i = ope.ejecuta();
-			System.out.println(i);
+			System.out.println(ope);
+			//int i = ope.ejecuta();
+			System.out.println(ope.ejecuta());
 		}
 	}
 }
