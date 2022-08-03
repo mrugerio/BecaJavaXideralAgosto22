@@ -1,13 +1,4 @@
 
-
-
-
-
-
-
-
-
-
 public class ForAnidado2 {
 	
 	public static void main(String[] args) {
@@ -24,8 +15,7 @@ public class ForAnidado2 {
 				//break LOOP_EXT; //5
 				
 				if (i>0) 
-					//continue LOOP_EXT; //== 
-					break LOOP_INT;
+					continue LOOP_EXT; //==break LOOP_INT;
 					//continue LOOP_INT;
 				
 				System.out.println("i="+i);
