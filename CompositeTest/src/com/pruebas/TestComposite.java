@@ -4,10 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.curso.v0.Constante;
-import com.curso.v0.Expresion;
-import com.curso.v0.Resta;
-import com.curso.v0.Suma;
+import com.curso.v0.*;
 
 class TestComposite {
 
@@ -80,6 +77,28 @@ class TestComposite {
 						),
 				new Constante(testValorB));
 		assertEquals(4.5,e.getValor());
+	}
+	
+	@Test
+	public void testExpresionCompleja() {
+		Expresion e = 
+				new Division(
+						new Multi(
+								new Resta(
+										new Constante(4.0),
+										new Constante(6.0)
+										),
+								new Constante(200.0)
+						),
+						new Suma(
+								new Constante(3),
+								new Constante(83)
+								)
+								
+						);
+		
+						
+		assertEquals(-0.0001162, e.getValor(), 0.000001);
 	}
 
 }
