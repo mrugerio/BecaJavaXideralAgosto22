@@ -18,8 +18,8 @@ import javax.sql.DataSource;
 /**
  * Servlet implementation class TestServlet
  */
-@WebServlet("/TestServlet")
-public class TestServlet extends HttpServlet {
+@WebServlet("/ServletTryWithResource")
+public class TestServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	// Define datasource/connection pool for Resource Injection
@@ -35,51 +35,23 @@ public class TestServlet extends HttpServlet {
 
 		// Step 1: Set up the printwriter
 		PrintWriter out = response.getWriter();
-		response.setContentType("text/plain");
+		response.setContentType("text/plain");		
 
-		// Step 2: Get a connection to the database
-		Connection myConn = null;
-		Statement myStmt = null;
-		ResultSet myRs = null;
-
-		try {
-			myConn = dataSource.getConnection();
-
-			// Step 3: Create a SQL statements
-			String sql = "select * from student";
-			myStmt = myConn.createStatement();
-
-			// Step 4: Execute SQL query
-			myRs = myStmt.executeQuery(sql);
-
+		try ( Connection myConn = dataSource.getConnection();
+				Statement myStmt = myConn.createStatement();
+				ResultSet myRs = myStmt.executeQuery
+						("select * from student")) {
+			
 			// Step 5: Process the result set
 			while (myRs.next()) {
 				String last_name = myRs.getString("last_name");
 				String first_name = myRs.getString("first_name");
 				String email = myRs.getString("email");
-				out.println(last_name + " " + first_name + " " + email);
+				out.println(first_name + " " + last_name + " " + email);
 			}
 		} catch (Exception exc) {
 			exc.printStackTrace();
-		} finally {
-			try {
-				myRs.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			try {
-				myStmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-
-			try {
-				myConn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-
-		}
+		} 
 	}
 
 }
