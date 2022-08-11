@@ -49,3 +49,13 @@ CompositeTest/.classpath
 CompositeTest/.project
 Collections/.classpath
 Collections/.project
+maven-web-student-tracker/.classpath
+maven-web-student-tracker/.project
+maven-web-student-tracker/.settings/.jsdtscope
+maven-web-student-tracker/.settings/org.eclipse.wst.common.component
+maven-web-student-tracker/.settings/org.eclipse.wst.jsdt.ui.superType.container
+maven-web-student-tracker/.settings/org.eclipse.wst.jsdt.ui.superType.name
+*.jar
+Servers/.project
+Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
+Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
