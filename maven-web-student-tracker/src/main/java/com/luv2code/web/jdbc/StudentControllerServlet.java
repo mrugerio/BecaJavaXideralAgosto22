@@ -37,6 +37,7 @@ public class StudentControllerServlet extends HttpServlet {
 		}
 	}
 	
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		try {
@@ -163,12 +164,14 @@ public class StudentControllerServlet extends HttpServlet {
 			System.out.println(s);
 		}
 		
+		students.add(new Student(999, "FirstName","lastName", "email@gmail"));
 		// add students to the request
-		//request.setAttribute("STUDENT_LIST", students);
+		request.setAttribute("LISTA_ESTUDIANTES", students);
+		
 				
 		// send to JSP page (view)
-		//RequestDispatcher dispatcher = request.getRequestDispatcher("/list-students.jsp");
-		//dispatcher.forward(request, response);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/list-students.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
