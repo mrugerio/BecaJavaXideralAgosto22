@@ -26,6 +26,11 @@ public class TestServlet2 extends HttpServlet {
 	@Resource(name = "jdbc/web_student_tracker")
 	private DataSource dataSource;
 
+	@Override
+	public void init() throws ServletException {
+		System.out.println("Paso por init de ServletTryWithResource");
+	}
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)

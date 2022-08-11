@@ -43,6 +43,8 @@ public class StudentControllerServlet extends HttpServlet {
 			// read the "command" parameter
 			String theCommand = request.getParameter("command");
 			
+			System.out.println("theCommand: "+theCommand);
+			
 			// if the command is missing, then default to listing students
 			if (theCommand == null) {
 				theCommand = "LIST";
@@ -150,18 +152,23 @@ public class StudentControllerServlet extends HttpServlet {
 		listStudents(request, response);
 	}
 
-	private void listStudents(HttpServletRequest request, HttpServletResponse response) 
+	private void listStudents(
+			HttpServletRequest request, HttpServletResponse response) 
 		throws Exception {
 
 		// get students from db util
 		List<Student> students = studentDbUtil.getStudents();
 		
+		for (Student s:students) {
+			System.out.println(s);
+		}
+		
 		// add students to the request
-		request.setAttribute("STUDENT_LIST", students);
+		//request.setAttribute("STUDENT_LIST", students);
 				
 		// send to JSP page (view)
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/list-students.jsp");
-		dispatcher.forward(request, response);
+		//RequestDispatcher dispatcher = request.getRequestDispatcher("/list-students.jsp");
+		//dispatcher.forward(request, response);
 	}
 
 }

@@ -24,7 +24,6 @@ DemoString/.classpath
 DemoString/.project
 Enums/.classpath
 Enums/.project
-*.xml
 xideralDoctosCurso/Java Variables.mindnode/style.mindnodestyle/metadata.plist
 *.plist
 Casting/.classpath
@@ -59,3 +58,10 @@ maven-web-student-tracker/.settings/org.eclipse.wst.jsdt.ui.superType.name
 Servers/.project
 Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
 Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
+maven-web-student-tracker/.settings/org.eclipse.wst.common.project.facet.core.xml
+Servers/Tomcat v9.0 Server at localhost-config/context.xml
+Servers/Tomcat v9.0 Server at localhost-config/server.xml
+Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v9.0 Server at localhost-config/web.xml
+xideralDoctosCurso/Java Variables.mindnode/contents.xml
+xideralDoctosCurso/Java Variables.mindnode/style.mindnodestyle/contents.xml
