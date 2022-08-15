@@ -12,11 +12,15 @@ public class Principal2 {
 				"webstudent",
 				"webstudent");
 			 PreparedStatement ps = 
-				conn.prepareStatement( "SELECT * FROM student");
+				conn.prepareStatement("SELECT * FROM student");
 			 ResultSet rs = ps.executeQuery()
 			){ //FIN TRY WITH RESOURCE
-				while (rs.next()) 
-					System.out.println(rs.getString(2)); 
+				while (rs.next()) { 
+					System.out.print(rs.getInt("id")); 
+					System.out.println(rs.getString("first_name"));
+					System.out.println(rs.getString("email"));
+
+				}
 			} 
 		
 	}
