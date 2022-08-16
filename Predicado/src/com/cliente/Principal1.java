@@ -5,7 +5,7 @@ import java.util.*;
 import com.interfaces.*;
 import com.pojo.Empleado;
 
-public class Principal0 {
+public class Principal1 {
 
 	public static void main(String[] args) {
 
@@ -20,22 +20,22 @@ public class Principal0 {
 		PredicadoEmpleado pe03 = new NombreLetrasMayorA();
 		
 		System.out.println("Empleados con edad mayor a 20 años");
-		for (Empleado e:listaEmpleados) 
-			if (pe01.probar(e))
-				System.out.println(e);
-		
+		ejecuta(listaEmpleados,pe01);
 		
 		System.out.println("Empleados ganan mas de 45");
-		for (Empleado e:listaEmpleados) 
-			if (pe02.probar(e))
-				System.out.println(e);
-		
+		ejecuta(listaEmpleados,pe02);
+
 		System.out.println("Empleados cuyo nombre es mayor a 6");
+		ejecuta(listaEmpleados,pe03);
+
+	}
+	
+	private static void ejecuta(List<Empleado> listaEmpleados, 
+			PredicadoEmpleado pe ) {
+		
 		for (Empleado e:listaEmpleados) 
-			if (pe03.probar(e))
+			if (pe.probar(e))
 				System.out.println(e);
-		
-		
 		
 	}
 
