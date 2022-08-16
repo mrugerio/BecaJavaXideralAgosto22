@@ -23,7 +23,7 @@ public class StudentControllerServlet extends HttpServlet {
 
 	private StudentDbUtil studentDbUtil;
 	
-	//@Resource(name="jdbc/javatechie") //SE COMENTO PARA HACER USO DE JNDI
+	//@Resource(name="jdbc/web_student_tracker") //SE COMENTO PARA HACER USO DE JNDI
 	private DataSource dataSource;
 	
 	
@@ -35,6 +35,7 @@ public class StudentControllerServlet extends HttpServlet {
 			//https://www.digitalocean.com/community/tutorials/tomcat-datasource-jndi-example-java
 			Context ctx = new InitialContext(); //USO DE JNDI
 			dataSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/javatechie"); //USO DE JNDI
+			System.out.println("Demo con JNDI, Datasource: "+dataSource);
 			studentDbUtil = new StudentDbUtil(dataSource);
 		}
 		catch (Exception exc) {
@@ -48,9 +49,7 @@ public class StudentControllerServlet extends HttpServlet {
 		try {
 			// read the "command" parameter
 			String theCommand = request.getParameter("command");
-			
-			System.out.println("theCommand: "+theCommand);
-			
+						
 			// if the command is missing, then default to listing students
 			if (theCommand == null) {
 				theCommand = "LIST";
