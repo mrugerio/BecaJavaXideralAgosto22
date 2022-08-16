@@ -46,6 +46,11 @@ public class Principal2 {
 
 		System.out.println("Empleados cuyo nombre es mayor a 6");
 		ejecuta(listaEmpleados,pe03);
+		
+		System.out.println("Empleados cuyo nombre es mayor a 6 y"
+				+ "ganan mas de 45 dlls");
+		ejecuta(listaEmpleados,pe04);
+		
 	}
 	
 	private static void ejecuta(List<Empleado> listaEmpleados, 
