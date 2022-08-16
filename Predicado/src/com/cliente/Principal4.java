@@ -5,11 +5,11 @@ import java.util.*;
 import com.interfaces.PredicadoEmpleado;
 import com.pojo.Empleado;
 
-public class Principal2 {
+public class Principal4 {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Principal2");
+		System.out.println("Principal4");
 
 		List<Empleado> listaEmpleados = new ArrayList<>();
 		listaEmpleados.add(new Empleado("Patrobas",28,45.67));
@@ -17,48 +17,22 @@ public class Principal2 {
 		listaEmpleados.add(new Empleado("Andronico",19,40.50));
 		listaEmpleados.add(new Empleado("Rolas",17,60.03));
 		
-		PredicadoEmpleado pe01 = new PredicadoEmpleado() {
-			@Override
-			public boolean probar(Empleado e) {
-				return e.getEdad()>20;
-			}
-		};
-		
-		PredicadoEmpleado pe02 = new PredicadoEmpleado() {
-			@Override
-			public boolean probar(Empleado e) {
-				return e.getSueldo()>45;
-			}
-		};
-		
-		PredicadoEmpleado pe03 = new PredicadoEmpleado() {
-			@Override
-			public boolean probar(Empleado e) {
-				return e.getNombre().length() > 6;
-			}
-		};
-		
-		PredicadoEmpleado pe04 = new PredicadoEmpleado() {
-			@Override
-			public boolean probar(Empleado e) {
-				return e.getNombre().length() > 6 &&
-						e.getSueldo()>45;
-			}
-		};
-		
 		System.out.println("Empleados con edad mayor a 20 años");
-		ejecuta(listaEmpleados,pe01);
+		ejecuta(listaEmpleados,x -> x.getEdad() >20);
 		
 		System.out.println("Empleados ganan mas de 45");
-		ejecuta(listaEmpleados,pe02);
+		ejecuta(listaEmpleados,z -> z.getSueldo()>45);
 
 		System.out.println("Empleados cuyo nombre es mayor a 6");
-		ejecuta(listaEmpleados,pe03);
+		ejecuta(listaEmpleados,emp -> emp.getNombre().length() > 6);
 		
 		System.out.println("Empleados cuyo nombre es mayor a 6 y"
 				+ " ganan mas de 45 dlls");
-		ejecuta(listaEmpleados,pe04);
+		ejecuta(listaEmpleados,w -> w.getNombre().length() > 6 &&
+				w.getSueldo()>45);
 		
+		System.out.println("Sin sentido prueba");
+		ejecuta(listaEmpleados,pato -> false);
 	}
 	
 	private static void ejecuta(List<Empleado> listaEmpleados, 
