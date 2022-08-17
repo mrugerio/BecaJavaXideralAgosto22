@@ -1,5 +1,7 @@
 package com.curso;
 import java.util.function.UnaryOperator;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 
 public class DemoFunction {
@@ -20,8 +22,20 @@ public class DemoFunction {
 		UnaryOperator<String> fun4 = s -> s.substring(5);
 		System.out.println(fun3.apply("CursoSpring"));
 
+		System.out.println("-------------");
+		List<Empleado> listaEmpleados = new ArrayList<>();
+		listaEmpleados.add(new Empleado("Patrobas",28,45.67));
+		listaEmpleados.add(new Empleado("Tercio",35,56.67));
+		listaEmpleados.add(new Empleado("Andronico",19,40.50));
+		listaEmpleados.add(new Empleado("Rolas",17,10.03));
 		
+		UnaryOperator<Empleado> uo = e -> {
+			e.setSueldo(e.getSueldo()*1.15);
+			return e;
+		};
 		
+		listaEmpleados.replaceAll(uo);
+		listaEmpleados.forEach(x -> System.out.println(x.getSueldo()));
 	}
 
 }
