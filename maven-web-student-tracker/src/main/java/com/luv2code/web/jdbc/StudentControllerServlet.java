@@ -23,7 +23,7 @@ public class StudentControllerServlet extends HttpServlet {
 
 	private StudentDbUtil studentDbUtil;
 	
-	//@Resource(name="jdbc/web_student_tracker") //SE COMENTO PARA HACER USO DE JNDI
+	@Resource(name="jdbc/web_student_tracker") //SE COMENTO PARA HACER USO DE JNDI
 	private DataSource dataSource;
 	
 	
@@ -33,8 +33,8 @@ public class StudentControllerServlet extends HttpServlet {
 		// create our student db util ... and pass in the conn pool / datasource
 		try {
 			//https://www.digitalocean.com/community/tutorials/tomcat-datasource-jndi-example-java
-			Context ctx = new InitialContext(); //USO DE JNDI
-			dataSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/javatechie"); //USO DE JNDI
+			//Context ctx = new InitialContext(); //USO DE JNDI
+			//dataSource = (DataSource) ctx.lookup("java:/comp/env/jdbc/javatechie"); //USO DE JNDI
 			System.out.println("Demo con JNDI, Datasource: "+dataSource);
 			studentDbUtil = new StudentDbUtil(dataSource);
 		}
