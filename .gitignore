@@ -86,3 +86,7 @@ beca/.mvn/wrapper/maven-wrapper.jar
 *.jar
 SpringBootRestHibernate/.mvn/wrapper/maven-wrapper.jar
 SpringBootRestHibernate/.mvn/wrapper/maven-wrapper.properties
+spring-batch/.classpath
+spring-batch/.project
+spring-batch/README.md
+spring-batch/src/test/java/com/javatechie/spring/batch/BatchProcessingDemoApplicationTests.java
