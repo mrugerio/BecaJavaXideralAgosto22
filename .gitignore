@@ -90,3 +90,9 @@ spring-batch/.classpath
 spring-batch/.project
 spring-batch/README.md
 spring-batch/src/test/java/com/javatechie/spring/batch/BatchProcessingDemoApplicationTests.java
+mockitoCalculadora/.classpath
+mockitoCalculadora/.project
+mockitoCalculadora/src/main/java/com/curso/beca/mockitoCalculadora/.placeholder
+mockitoCalculadora/src/main/resources/.placeholder
+mockitoCalculadora/src/test/java/com/curso/beca/mockitoCalculadora/.placeholder
+mockitoCalculadora/src/test/resources/log4j.xml
