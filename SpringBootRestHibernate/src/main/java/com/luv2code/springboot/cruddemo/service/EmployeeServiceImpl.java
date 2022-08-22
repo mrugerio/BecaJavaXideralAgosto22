@@ -17,7 +17,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private EmployeeDAO employeeDAO;
 	
 	@Autowired
-	public EmployeeServiceImpl(@Qualifier("employeeDAOJdbcImpl") EmployeeDAO theEmployeeDAO) {
+	public EmployeeServiceImpl(@Qualifier("employeeDAOHibernateImpl") EmployeeDAO theEmployeeDAO) {
 		employeeDAO = theEmployeeDAO;
 	}
 	
