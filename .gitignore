@@ -97,3 +97,10 @@ mockitoCalculadora/src/main/resources/.placeholder
 mockitoCalculadora/src/test/java/com/curso/beca/mockitoCalculadora/.placeholder
 mockitoCalculadora/src/test/resources/log4j.xml
 SpringBootRestHibernate/my-crazy-stuff.log
+crm-web-app-rest-client-demo/.classpath
+crm-web-app-rest-client-demo/.project
+crm-web-app-rest-client-demo/.settings/.jsdtscope
+crm-web-app-rest-client-demo/.settings/org.eclipse.wst.common.component
+crm-web-app-rest-client-demo/.settings/org.eclipse.wst.common.project.facet.core.xml
+crm-web-app-rest-client-demo/.settings/org.eclipse.wst.jsdt.ui.superType.container
+crm-web-app-rest-client-demo/.settings/org.eclipse.wst.jsdt.ui.superType.name
