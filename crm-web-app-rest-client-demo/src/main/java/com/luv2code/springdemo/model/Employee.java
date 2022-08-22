@@ -1,19 +1,28 @@
 package com.luv2code.springdemo.model;
 
-public class Customer {
+public class Employee {
 
 	private int id;
-	
 	private String firstName;
-	
-	private String lastName;
-	
+	private String lastName;	
 	private String email;
 	
-	public Customer() {
-		
+	public Employee() {
 	}
 
+	public Employee(String firstName, String lastName, String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public Employee(int id,String firstName, String lastName, String email) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -48,10 +57,16 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
 		
 }
+
+
+
+
+
+
 
 
 

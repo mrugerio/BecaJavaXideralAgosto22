@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.luv2code.springdemo.model.Customer;
+import com.luv2code.springdemo.model.Employee;
 
 @Service
 public class CustomerServiceRestClientImpl implements CustomerService {
@@ -33,18 +33,18 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 	}
 	
 	@Override
-	public List<Customer> getCustomers() {
+	public List<Employee> getCustomers() {
 		
 		logger.info("***OBTENER LISTA DE CLIENTES DESDE EL SERVICE REST CLIENTE");
 		logger.info("in getCustomers(): Calling REST API " + crmRestUrl);
 
 		// make REST call
-		ResponseEntity<List<Customer>> responseEntity = 
+		ResponseEntity<List<Employee>> responseEntity = 
 											restTemplate.exchange(crmRestUrl, HttpMethod.GET, null, 
-													 new ParameterizedTypeReference<List<Customer>>() {});
+													 new ParameterizedTypeReference<List<Employee>>() {});
 
 		// get the list of customers from response
-		List<Customer> customers = responseEntity.getBody();
+		List<Employee> customers = responseEntity.getBody();
 
 		logger.info("in getCustomers(): customers" + customers);
 		
@@ -52,15 +52,15 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 	}
 
 	@Override
-	public Customer getCustomer(int theId) {
+	public Employee getCustomer(int theId) {
 		logger.info("***OBTENER UN CLIENTE DESDE EL SERVICE REST CLIENTE");
 
 		logger.info("in getCustomer(): Calling REST API " + crmRestUrl);
 
 		// make REST call
-		Customer theCustomer = 
+		Employee theCustomer = 
 				restTemplate.getForObject(crmRestUrl + "/" + theId, 
-										  Customer.class);
+						Employee.class);
 
 		logger.info("in saveCustomer(): theCustomer=" + theCustomer);
 		
@@ -68,7 +68,7 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 	}
 
 	@Override
-	public void saveCustomer(Customer theCustomer) {
+	public void saveCustomer(Employee theCustomer) {
 
 		logger.info("in saveCustomer(): Calling REST API " + crmRestUrl);
 		

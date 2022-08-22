@@ -2,15 +2,15 @@ package com.luv2code.springdemo.service;
 
 import java.util.List;
 
-import com.luv2code.springdemo.model.Customer;
+import com.luv2code.springdemo.model.Employee;
 
 public interface CustomerService {
 
-	public List<Customer> getCustomers();
+	public List<Employee> getCustomers();
 
-	public void saveCustomer(Customer theCustomer);
+	public void saveCustomer(Employee theCustomer);
 
-	public Customer getCustomer(int theId);
+	public Employee getCustomer(int theId);
 
 	public void deleteCustomer(int theId);
 	
