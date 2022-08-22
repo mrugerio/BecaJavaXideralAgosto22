@@ -104,3 +104,9 @@ crm-web-app-rest-client-demo/.settings/org.eclipse.wst.common.component
 crm-web-app-rest-client-demo/.settings/org.eclipse.wst.common.project.facet.core.xml
 crm-web-app-rest-client-demo/.settings/org.eclipse.wst.jsdt.ui.superType.container
 crm-web-app-rest-client-demo/.settings/org.eclipse.wst.jsdt.ui.superType.name
+rest/.mvn/wrapper/maven-wrapper.jar
+rest/.mvn/wrapper/maven-wrapper.properties
+restClient/.mvn/wrapper/maven-wrapper.jar
+restClient/.mvn/wrapper/maven-wrapper.properties
+restClient/mvnw
+restClient/mvnw.cmd
