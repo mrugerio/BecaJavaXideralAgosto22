@@ -110,3 +110,13 @@ restClient/.mvn/wrapper/maven-wrapper.jar
 restClient/.mvn/wrapper/maven-wrapper.properties
 restClient/mvnw
 restClient/mvnw.cmd
+01-jpa-cruddemo/.classpath
+01-jpa-cruddemo/.project
+*.cmd
+02-spring-data-jpa-cruddemo/.classpath
+02-spring-data-jpa-cruddemo/.project
+02-spring-data-jpa-cruddemo/mvnw
+03-spring-data-rest-cruddemo/.classpath
+03-spring-data-rest-cruddemo/.project
+03-spring-data-rest-cruddemo/mvnw
+01-jpa-cruddemo/mvnw
