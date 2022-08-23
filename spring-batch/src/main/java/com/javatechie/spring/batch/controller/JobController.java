@@ -24,11 +24,18 @@ public class JobController {
 
     @PostMapping("/importCustomers")
     public void importCsvToDBJob() {
+    	
+    	long horaInicio = System.currentTimeMillis();
+    	
         JobParameters jobParameters = new JobParametersBuilder()
-                .addLong("startAt", System.currentTimeMillis()).toJobParameters();
+            .addLong("startAt",horaInicio).toJobParameters();
+        
         try {
             jobLauncher.run(job, jobParameters);
-        } catch (JobExecutionAlreadyRunningException | JobRestartException | JobInstanceAlreadyCompleteException | JobParametersInvalidException e) {
+        } catch (JobExecutionAlreadyRunningException | 
+        		JobRestartException | 
+        		JobInstanceAlreadyCompleteException | 
+        		JobParametersInvalidException e) {
             e.printStackTrace();
         }
     }

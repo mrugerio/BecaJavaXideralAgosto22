@@ -2,7 +2,9 @@ package com.javatechie.spring.batch.config;
 
 import com.javatechie.spring.batch.entity.Customer;
 import com.javatechie.spring.batch.repository.CustomerRepository;
-//import lombok.AllArgsConstructor;
+
+import lombok.AllArgsConstructor;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -22,19 +24,12 @@ import org.springframework.core.task.TaskExecutor;
 
 @Configuration
 @EnableBatchProcessing
-//@AllArgsConstructor
+@AllArgsConstructor
 public class SpringBatchConfig {
 
     private JobBuilderFactory jobBuilderFactory;
     private StepBuilderFactory stepBuilderFactory;
     private CustomerRepository customerRepository;
-    
-    public SpringBatchConfig(JobBuilderFactory jobBuilderFactory, StepBuilderFactory stepBuilderFactory,
-			CustomerRepository customerRepository) {
-		this.jobBuilderFactory = jobBuilderFactory;
-		this.stepBuilderFactory = stepBuilderFactory;
-		this.customerRepository = customerRepository;
-	}
 
 	@Bean
     public FlatFileItemReader<Customer> reader() {
