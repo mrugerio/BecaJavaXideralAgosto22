@@ -2,9 +2,8 @@ package com.client.rest.model;
 
 import lombok.*;
 
-@NoArgsConstructor @AllArgsConstructor 
-@Getter @Setter 
-@ToString
+@NoArgsConstructor @AllArgsConstructor
+@Data
 public class Employee {
 
 	private int id;
