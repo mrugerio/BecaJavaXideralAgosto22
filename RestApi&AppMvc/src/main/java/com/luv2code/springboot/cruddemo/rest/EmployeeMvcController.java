@@ -33,7 +33,7 @@ public class EmployeeMvcController {
 		
 		return "list-customers";
 	}
-/*	
+
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 		
@@ -49,9 +49,9 @@ public class EmployeeMvcController {
 	public String saveCustomer(@ModelAttribute("customer") Employee theCustomer) {
 		
 		// save the customer using our service
-		customerService.saveCustomer(theCustomer);	
+		employeeService.save(theCustomer);	
 		
-		return "redirect:/customer/list";
+		return "redirect:/mvc/employees";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -59,7 +59,7 @@ public class EmployeeMvcController {
 									Model theModel) {
 		
 		// get the customer from our service
-		Employee theCustomer = customerService.getCustomer(theId);	
+		Employee theCustomer = employeeService.findById(theId);	
 		
 		// set customer as a model attribute to pre-populate the form
 		theModel.addAttribute("customer", theCustomer);
@@ -72,11 +72,11 @@ public class EmployeeMvcController {
 	public String deleteCustomer(@RequestParam("customerId") int theId) {
 		
 		// delete the customer
-		customerService.deleteCustomer(theId);
+		employeeService.deleteById(theId);
 		
-		return "redirect:/customer/list";
+		return "redirect:/mvc/employees";
 	}
-*/
+
 }
 
 
