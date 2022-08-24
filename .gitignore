@@ -120,3 +120,7 @@ restClient/mvnw.cmd
 03-spring-data-rest-cruddemo/.project
 03-spring-data-rest-cruddemo/mvnw
 01-jpa-cruddemo/mvnw
+RestApi&AppMvc/.mvn/wrapper/maven-wrapper.jar
+RestApi&AppMvc/.mvn/wrapper/maven-wrapper.properties
+RestApi&AppMvc/my-crazy-stuff.log
+RestApi&AppMvc/.mvn/wrapper/maven-wrapper.jar
