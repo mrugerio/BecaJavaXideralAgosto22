@@ -88,7 +88,49 @@ public class Principal1 {
 		
 		listaResultado.forEach(System.out::println);
 		
+		//-------------
+		System.out.println("*************");
+		listEmp = empList.stream()
+					.peek(e -> e.incrementoSalario(10.0))
+					.collect(Collectors.toList());
 		
+		//-------------
+		System.out.println("*************");
+		
+		Employee empleado = Stream.of(empIds)
+				//.map(Principal1::getEmpleado)
+				//.map(x -> Principal.getEmpleado(x))
+				.map((Integer x) -> {
+					Employee em = Principal1.getEmpleado(x);
+					System.out.println(em);
+					return em;
+				})
+				.filter( e -> {
+					System.out.println(e.getClass().getName());
+					return e.getNombre().endsWith("o");
+				})
+				.filter(e -> e.getSalary()>400)
+				.findFirst()
+				.orElse(null);
+		
+		Employee empleado1 = Stream.of(empIds)
+				.map(Principal1::getEmpleado)
+				.filter(e -> e.getNombre().endsWith("o"))
+				.filter(e -> e.getSalary()>400)
+				.findAny() //REGRESA UN OPTIONAL
+				.orElse(null);
+				
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
