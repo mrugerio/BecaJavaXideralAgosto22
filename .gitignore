@@ -126,3 +126,5 @@ RestApi&AppMvc/my-crazy-stuff.log
 RestApi&AppMvc/.mvn/wrapper/maven-wrapper.jar
 CollectionsLambdas/.classpath
 CollectionsLambdas/.project
+Streams/.classpath
+Streams/.project
