@@ -16,7 +16,7 @@ import com.luv2code.springboot.cruddemo.service.EmployeeService;
 
 @Controller
 @RequestMapping("/mvc")
-public class EmployeeController {
+public class EmployeeMvcController {
 
 	// need to inject our customer service
 	@Autowired
@@ -31,7 +31,6 @@ public class EmployeeController {
 		// add the customers to the model
 		theModel.addAttribute("customers", theCustomers);
 		
-		System.out.println(theCustomers);
 		return "list-customers";
 	}
 /*	
