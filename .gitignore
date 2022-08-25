@@ -128,3 +128,5 @@ CollectionsLambdas/.classpath
 CollectionsLambdas/.project
 Streams/.classpath
 Streams/.project
+spring-batch-lambda/.classpath
+spring-batch-lambda/.project
